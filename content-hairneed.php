@@ -24,7 +24,11 @@
 
 ">
 
-		<?php the_content(); ?>
+
+		<?php the_content();
+
+
+        ?>
 		<?php
 
 if (class_exists('MultiPostThumbnails')) :

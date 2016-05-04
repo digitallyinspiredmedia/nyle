@@ -622,5 +622,31 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 //remove default sorting drop-down from WooCommerce
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 
+//WordPress shortcode for product url
+add_shortcode( 'product_url', 'rohils_product_url_function' );
+
+function rohils_product_url_function($atts){
+        global $wpdb;
+
+        if ( empty( $atts ) ) {
+            return '';
+        }
+
+        if ( isset( $atts['id'] ) ) {
+            $product_data = get_post( $atts['id'] );
+        } elseif ( isset( $atts['sku'] ) ) {
+            $product_id   = wc_get_product_id_by_sku( $atts['sku'] );
+            $product_data = get_post( $product_id );
+        } else {
+            return '';
+        }
+
+        if ( 'product' !== $product_data->post_type ) {
+            return '';
+        }
+
+        $_product = wc_get_product( $product_data );
+echo '<a href="' .esc_url( get_post_permalink($_product->id) ).'"> View more </a> ';
+}
 
 ?>
