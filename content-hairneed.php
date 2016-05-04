@@ -9,12 +9,12 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php
+<div class="banner">
+    <?php
 		// Post thumbnail.
-    echo "content hairneeds.php".'<br>' ;
 		the_post_thumbnail( 'category-thumb', array('class' => 'img-responsive') );
 	?>
-
+</div>
 	<header class="entry-header">
 		<?php  the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->

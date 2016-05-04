@@ -14,7 +14,6 @@ get_header(); ?>
 		<?php
 		// Start the loop.
 		while ( have_posts() ) : the_post();
-echo "single-hairneeds.php";
 			// Include the single post content template.
 			get_template_part( 'content', 'hairneed' );
 			?>

@@ -620,3 +620,12 @@ nav ul > li.current-menu-item a{
     color: #00853e;
 }
 
+.banner{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.banner img{
+    max-width: 100%;
+ height: auto;
+    margin: 0 auto;
+}
