@@ -629,3 +629,8 @@ nav ul > li.current-menu-item a{
  height: auto;
     margin: 0 auto;
 }
+
+#content-bgimage{
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}

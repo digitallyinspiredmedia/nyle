@@ -329,7 +329,7 @@ function disable_wp_emojicons() {
   }
 }
 
-//WordPress shortcode t
+//WordPress shortcode for google map
 function googlemap($atts, $content = null) {
    extract(shortcode_atts(array(
                "width" => '940',
@@ -477,7 +477,6 @@ function bsb_disable_plugin_actions( $actions, $plugin_file, $plugin_data, $cont
 }
 
 
-
 function annointed_admin_bar_remove() {
         global $wp_admin_bar;
 
@@ -486,6 +485,29 @@ function annointed_admin_bar_remove() {
 }
 
 add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
+
+// Multiple Post Thumbnails / Featured Images
+if (class_exists('MultiPostThumbnails')) {
+
+new MultiPostThumbnails(array(
+'label' => 'Product Image',
+'id' => 'product-image',
+'post_type' => 'hairneeds'
+ ) );
+
+ }
+
+// Multiple Post Thumbnails / Featured Images
+if (class_exists('MultiPostThumbnails')) {
+
+new MultiPostThumbnails(array(
+'label' => 'Product Ingredient Image',
+'id' => 'productingredient-image',
+'post_type' => 'hairneeds'
+ ) );
+
+ }
+add_filter('mpt_unprotect_meta', '__return_true');
 
 /**
  * Modifies tag cloud widget arguments to have all tags in the widget same font size.
