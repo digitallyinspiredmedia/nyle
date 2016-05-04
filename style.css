@@ -650,6 +650,7 @@ footer.site-footer{
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+    overflow: hidden;
 }
 .copyright{
     font: 400 11px/15px 'Lato', sans-serif;

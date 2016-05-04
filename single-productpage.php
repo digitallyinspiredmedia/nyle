@@ -21,7 +21,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="portfolio-inner-image">
 			<p><?php 	the_content();
-			// wps_thumbnails_list(); ?>
+			 ?>
 		</p>
 <?php
 

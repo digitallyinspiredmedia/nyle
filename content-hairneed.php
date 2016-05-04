@@ -15,39 +15,21 @@
 		the_post_thumbnail( 'category-thumb', array('class' => 'img-responsive') );
 	?>
 </div>
-	<header class="entry-header">
-		<?php  the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content" id="content-bgimage" style="background-image: url('<?php if (class_exists('MultiPostThumbnails')) : echo MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), 'productingredient-image',NULL, 'full'); endif; ?> ') !important ;
-
-
-">
-
-
+	<div class="entry-content" id="content-bgimage" style="background-image: url('<?php if (class_exists('MultiPostThumbnails')) : echo MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), 'productingredient-image',NULL, 'full'); endif; ?> ') !important ; ">
+  <div class="productimage-relate">
+        <?php if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'product-image', NULL,  'product-featured-thumbnail'); endif; ?>
+</div>
+    <div class="hairneed-content">
 		<?php the_content();
 
+        $productid="_related_prodcut_value_key";
+$var = do_shortcode( '[product_url id="'. get_post_meta($post->ID,$productid , true) .'"]' );
+        echo $var;
 
         ?>
-		<?php
+        </div>
 
-if (class_exists('MultiPostThumbnails')) :
 
-MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'product-image', NULL,  'product-featured-thumbnail');
-
-endif;
-
-?>
-		<?php
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'base' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'base' ) . ' </span>%',
-				'separator'   => '<span class="screen-reader-text">, </span>',
-			) );
-		?>
 	</div><!-- .entry-content -->
 
 	
