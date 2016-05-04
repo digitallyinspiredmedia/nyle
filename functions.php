@@ -139,7 +139,6 @@ add_action( 'wp_enqueue_scripts', 'base_scripts' );
 // This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'base' ),
-		'footer' => __( 'Footer Menu', 'base' ),
 		'social'  => __( 'Social Links Menu', 'base' ),
 	) );
 

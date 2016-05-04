@@ -634,3 +634,24 @@ nav ul > li.current-menu-item a{
     background-position: bottom right;
     background-repeat: no-repeat;
 }
+
+footer.site-footer{
+    background: #f7f7f7;
+    padding: 20px 0px 20px;
+    border-top: 1px solid #ebebeb;
+     width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.footersite-info{
+    width: 1200px;
+     margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.copyright{
+    font: 400 11px/15px 'Lato', sans-serif;
+        color: #5d5c5c;
+}
