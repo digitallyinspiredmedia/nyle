@@ -554,11 +554,69 @@ td {
   content: " ";
 }
 
-
-.site-content{
-  width: 1300px;
+ul > li{
+    list-style: none;
+    display: inline-block;
+}
+.container{
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
+.container-full{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Header */
+.header-navigation{
+     width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+    background: #fff;
+    min-height: 106px;
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(235,235,235,1);
+-moz-box-shadow: 0px 2px 0px 0px rgba(235,235,235,1);
+box-shadow: 0px 2px 0px 0px rgba(235,235,235,1);
+}
+.mainnav{
+  width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+h1.logo{
+    float: left;
+    width: 143px;
+    height: 92px;
+}
+h1.logo img{
+    width: 142px;
+    height: 90px;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+nav ul > li{
+    text-transform: capitalize;
+    font: 700 13px/18px 'Lato', sans-serif;
+    margin: 44px 0;
+}
+
+nav ul > li a{
+    color : #313131;
+    padding: 6px 16px;
+}
+nav ul > li.current-menu-item a{
+    color: #00853e;
+}
+

@@ -46,6 +46,7 @@
 <body <?php body_class(( array( "pushmenu-push") )); ?>>
 <div id="page" class="site">
 	<header class="header-navigation">
+        <div class="mainnav">
 		<!-- logo -->
 		<h1 class="logo">
     		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -74,9 +75,7 @@
     		</div>
   		</nav>
 		 <!-- menu end -->
-		 <!-- searh begin -->
-
-		 <!-- search end -->
+        </div>
   		<!-- menu icon-->
   			<a id="nav-toggle" href="#"><span></span></a>
   		<!-- menu icon end -->
