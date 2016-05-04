@@ -645,7 +645,7 @@ function rohils_product_url_function($atts){
         }
 
         $_product = wc_get_product( $product_data );
-echo '<a href="' .esc_url( get_post_permalink($_product->id) ).'"> View more </a> ';
+echo '<a class="viewmore btn" href="' .esc_url( get_post_permalink($_product->id) ).'"> View more </a> ';
 }
 
 ?>

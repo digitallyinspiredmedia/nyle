@@ -633,7 +633,43 @@ nav ul > li.current-menu-item a{
 #content-bgimage{
     background-position: bottom right;
     background-repeat: no-repeat;
+/*    background-attachment: fixed;*/
+
 }
+div#content-bgimage:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+.productimage-relate{
+ width: 440px;
+    height: auto;
+    margin-right: 70px;
+    float: left;
+}
+.hairneed-content{
+    width: calc(100% - 440px - 70px - 60px);
+    float: left;
+    margin-right: 60px;
+}
+.hairneed-content p{
+    font: 400 15px/22px 'Lato', sans-serif;
+    color: #313131;
+    margin-bottom: 22px;
+}
+.hairneed-content .btn{
+    font: 400 20px/26px 'Lato', sans-serif;
+    color: #323232;
+    border: 1px solid #00853e;
+    padding: 6px 26px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.hairneed-content .btn:hover{
+    color: #fff;
+    background-color: #00853e;
+}
+
 
 footer.site-footer{
     background: #f7f7f7;
