@@ -3,25 +3,27 @@
  *  Template Name: Product
  *
  * @package Base
- * @subpackage Base Rillusion
+ * @subpackage Base
  * @since  Base v1.0
  */
 get_header(); ?>
 
-<!-- Portfolio -->
+<div id="content" class="col-full">
+<div id="main" class="col-left">
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+  		<h1 class="page-title"><?php the_title(); ?></h1>
+<?php
+ endwhile;
+ endif;
+?>
+<div class="hairneeds-wrapper">
 
-<div class="container">
 
- <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-   <div class="row four-content-1">
-     <div class="col-f-12">
-       <div class="four-box-title">
-         <?php the_title(); ?>
 <ul class="products">
 	<?php
 		$args = array(
 			'post_type' => 'product',
-			'posts_per_page' => 12
+			'posts_per_page' => 120
 			);
 		$loop = new WP_Query( $args );
 		if ( $loop->have_posts() ) {
@@ -34,13 +36,10 @@ get_header(); ?>
 		wp_reset_postdata();
 	?>
 </ul><!--/.products-->
-           
-       </div>
-     </div>
-   </div>
- <?php
-  endwhile;
-  endif;
- ?>
+
+</div>
+
+</div>
+</div>
 
 <?php get_footer(); ?>
