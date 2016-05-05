@@ -555,39 +555,33 @@ function woo_remove_product_tabs( $tabs ) {
     return $tabs;
 }
 
-/*
- * Hook in on activation
- *
- */
-add_action( 'init', 'yourtheme_woocommerce_image_dimensions', 1 );
 
+//responsive Images
 /**
- * Define image sizes
+ * Disable responsive image support (test!)
  */
-function yourtheme_woocommerce_image_dimensions() {
-  	$catalog = array(
-		'width' 	=> '400',	// px
-		'height'	=> '400',	// px
-		'crop'		=> 1 		// true
-	);
 
-	$single = array(
-		'width' 	=> '600',	// px
-		'height'	=> '600',	// px
-		'crop'		=> 1 		// true
-	);
+// Clean the up the image from wp_get_attachment_image()
+add_filter( 'wp_get_attachment_image_attributes', function( $attr )
+{
+    if( isset( $attr['sizes'] ) )
+        unset( $attr['sizes'] );
 
-	$thumbnail = array(
-		'width' 	=> '120',	// px
-		'height'	=> '120',	// px
-		'crop'		=> 0 		// false
-	);
+    if( isset( $attr['srcset'] ) )
+        unset( $attr['srcset'] );
 
-	// Image sizes
-	update_option( 'shop_catalog_image_size', $catalog ); 		// Product category thumbs
-	update_option( 'shop_single_image_size', $single ); 		// Single product image
-	update_option( 'shop_thumbnail_image_size', $thumbnail ); 	// Image gallery thumbs
-}
+    return $attr;
+
+ }, PHP_INT_MAX );
+
+// Override the calculated image sizes
+add_filter( 'wp_calculate_image_sizes', '__return_false',  PHP_INT_MAX );
+
+// Override the calculated image sources
+add_filter( 'wp_calculate_image_srcset', '__return_false', PHP_INT_MAX );
+
+// Remove the reponsive stuff from the content
+remove_filter( 'the_content', 'wp_make_content_images_responsive' );
 
 //list all product in one page
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return -1;' ), 20 );

@@ -114,7 +114,7 @@ select {
 select:focus {
     outline: none;
 }
-/* Scroll Bar *
+/* Scroll Bar */
 ::-webkit-scrollbar-track{
   border-radius: 10px;
   background-color: #ddd;
@@ -132,7 +132,7 @@ select:focus {
   background-color: #bbb;
   border: 0px solid transparent;
 }
-*/
+
 /* Code begin */
 .show {
   display:block;
@@ -429,13 +429,13 @@ big {
  3.0 - Elements
  */
 body {
-  background-color: #fefefe;
-  color: #333;
-   font-family: 'Lora', serif;
+  background-color: #fff;
+  color: #313131;
+   font-family: 'Lato', sans-serif;
 	/* Fallback for when there is no custom background color defined. */
 }
 a{
-  color: #333;
+  color: #313131;
 }
 hr {
 	background-color: #d1d1d1;
@@ -641,6 +641,13 @@ div#content-bgimage:after {
     display: table;
     clear: both;
 }
+h1.page-title{
+font: 300 48px/52px 'Lato', sans-serif;
+    color: #313131;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 45px 0 38px;
+}
 .productimage-relate{
  width: 440px;
     height: auto;
@@ -669,8 +676,51 @@ div#content-bgimage:after {
     color: #fff;
     background-color: #00853e;
 }
+ul.hairneedcover{
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+li.hairneedlist{
+    margin-right: 30px;
+    width: 225px;
 
+}
+li.hairneedlist:last-child{
+    margin-right: 0px;
+}
+.titlebox span{
+    display: table-cell;
+vertical-align: middle;
+}
+.titlebox{
 
+    position: relative;
+display: table;
+
+    font: 700 27px/normal 'Lato', sans-serif;
+    width: 225px;
+    height: 232px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+/*li.hairneedlist:nth-child(2) .titlebox,*/
+li.hairneedlist:nth-child(4) .titlebox{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+li.hairneedlist:nth-child(2) .titlebox,
+li.hairneedlist:nth-child(4) .titlebox{
+    position: absolute;
+    top: 233px;
+}
+li.hairneedlist:nth-child(2) .imagebox,
+li.hairneedlist:nth-child(4) .imagebox{
+     position: absolute;
+    top: 1px;
+}
 footer.site-footer{
     background: #f7f7f7;
     padding: 20px 0px 20px;
