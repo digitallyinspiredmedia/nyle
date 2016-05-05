@@ -137,6 +137,7 @@ select:focus {
 .show {
   display:block;
 }
+screen-reader-text,
 .sr-only{
     position: absolute;
     width: 1px;
@@ -728,6 +729,7 @@ footer.site-footer{
      width: 100%;
   margin-left: auto;
   margin-right: auto;
+    margin-top: 102px;
 
 }
 .footersite-info{
@@ -738,7 +740,20 @@ footer.site-footer{
   padding-right: 15px;
     overflow: hidden;
 }
-.copyright{
+ul.social-menu{
+    margin: 0px 0px 10px 0px;
+}
+
+ul.social-menu li{
+    margin: 0px 6px;
+}
+ul.social-menu li:first-child{
+    margin-left: 0px;
+}
+.copyright,
+.madein{
     font: 400 11px/15px 'Lato', sans-serif;
         color: #5d5c5c;
 }
+
+/*a[href*="behance.net"]:before */

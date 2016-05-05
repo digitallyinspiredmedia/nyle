@@ -20,23 +20,19 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
     <div class="footersite-info">
   <div class="copyright float-left">
-      <?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
-    <?php if ( has_nav_menu( 'social' ) ) : ?>
-      <nav id="site-navigation" class="social-navigation" role="navigation" aria-label="<?php _e( 'social Menu', 'base' ); ?>">
-        <?php
-          wp_nav_menu( array(
-            'theme_location' => 'social',
-            'menu_class'     => 'social-menu',
-           ) );
-        ?>
-      </nav><!-- .main-navigation -->
-    <?php endif; ?>
-  <?php endif; ?>
+      <ul class="social-menu">
+        <li> <a href="http://facebook.com" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/image/facebook.png "> </a></li>
+        <li> <a href="http://twitter.com" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/image/twitter.png "> </a></li>
+        <li> <a href="http://pinterest.com" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/image/pinterest.png "> </a></li>
+        <li> <a href="http://linkedin.com" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/image/linkedin.png "> </a></li>
+        <li> <a href="http://youtube.com" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/image/youtube.png "> </a></li>
+        <li> <a href="http://plus.google.com" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/image/googleplus.png "> </a></li>
+      </ul>
      <p><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?> &nbsp; &copy; <?php the_date('Y') ?></a> All Rights Reserved. </p>
   </div>
-  <div class="float-right">
+  <div class="madein float-right">
 
-      <p> <a href="http://digitallyinspiredmedia.com" target="_parent"> Designed by Digitally Inspired Media </a></p>
+      <p> <a href="http://digitallyinspiredmedia.com" target="_blank"> Designed by Digitally Inspired Media </a></p>
   </div>
     </div>
 </footer>
