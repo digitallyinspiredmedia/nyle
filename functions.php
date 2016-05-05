@@ -653,4 +653,42 @@ function woo_custom_product_add_to_cart_text() {
 
 }
 
+
+
+
+//ing
+
+add_action('product_cat_add_form_fields', 'category_metabox_add', 10, 1);
+add_action('product_cat_edit_form_fields', 'category_metabox_edit', 10, 1);
+
+function category_metabox_add($tag) { ?>
+	<div class="form-field">
+		<label for="ingredient-code"><?php _e('Ingredient Color Code') ?></label>
+		<input name="ingredient-code" id="ingredient-code" type="color" value="" size="40" aria-required="true" />
+		<p class="description"><?php _e('This color code will shown at category page.'); ?></p>
+	</div>
+<?php }
+
+function category_metabox_edit($tag) { ?>
+	<tr class="form-field">
+		<th scope="row" valign="top">
+			<label for="ingredient-code"><?php _e('Ingredient Color Code'); ?></label>
+		</th>
+		<td>
+			<input name="ingredient-code" id="ingredient-code" type="color" value="<?php echo get_term_meta($tag->term_id, 'ingredient-code', true); ?>" size="40" aria-required="true" />
+			<p class="description"><?php _e('This color code will shown at category page.'); ?></p>
+		</td>
+	</tr>
+<?php }
+
+add_action('created_product_cat', 'save_category_metadata', 10, 1);
+add_action('edited_product_cat', 'save_category_metadata', 10, 1);
+
+function save_category_metadata($term_id)
+{
+    if (isset($_POST['ingredient-code']))
+		update_term_meta( $term_id, 'ingredient-code', $_POST['ingredient-code']);
+
+}
+
 ?>

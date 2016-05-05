@@ -13,10 +13,7 @@ get_header(); ?>
 <div class="container">
 
  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-   <div class="row four-content-1">
-     <div class="col-f-12">
-       <div class="four-box-title">
-         <?php the_title(); ?>
+   <h1 class="page-title"><?php the_title(); ?></h1>
 <!-- ingrediant -->
            <?php
              $taxonomyName = "product_cat";
@@ -30,6 +27,10 @@ get_header(); ?>
         echo '<li>
         <a href="' . get_term_link($pterm->name, $taxonomyName) . '">' . $pterm->name . '';
          echo '<p>'. $pterm->description . '</p>'; 
+ $thumb_src = get_term_meta($pterm->term_id, 'ingredient-code', true);
+if($thumb_src != '') :
+	echo $thumb_src;
+endif;
 
         $thumbnail_id = get_woocommerce_term_meta($pterm->term_id, 'thumbnail_id', true);
         // get the image URL for parent category
@@ -41,12 +42,15 @@ get_header(); ?>
         $terms = get_terms($taxonomyName, array('parent' => $pterm->term_id, 'orderby' => 'slug', 'hide_empty' => false));
         foreach ($terms as $term) {
 
-            echo '<li><a href="' . get_term_link($term->name, $taxonomyName) . '">' . $term->name . '</a></li>';
+            echo '<li><a href="' . get_term_link($term->name, $taxonomyName) . '">' . $term->name . '</a> </li>';
+
             $thumbnail_id = get_woocommerce_term_meta($pterm->term_id, 'thumbnail_id', true);
             // get the image URL for child category
             $image = wp_get_attachment_url($thumbnail_id);
             // print the IMG HTML for child category
             echo "<img src='{$image}' alt='' width='400' height='400' />";
+
+
         }
         
        echo '  </a></li>';
@@ -56,10 +60,7 @@ get_header(); ?>
 <!-- ingrediant -->
            
            <!--/.products-->
-           
-       </div>
-     </div>
-   </div>
+
  <?php
   endwhile;
   endif;
