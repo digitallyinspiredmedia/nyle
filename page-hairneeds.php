@@ -31,13 +31,20 @@ get_header(); ?>
    <?php
     global $post;
     $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), false, '' );
+       echo "<img src=' $src[0] ' />";
+
   ?>
-  <div class="hairneedcover" style="background-image: url(<?php echo $src[0]; ?> ) !important;background-size: cover;background-position: center; background-repeat: no-repeat;">
+  <div class="hairneedcover">
     <a href="<?php the_permalink(); ?>">
      <div class="cont">
        <div class="content">
            
-        <?php echo '<span class="titlewrapper"><h4>' . get_the_title() . '</h4></span>'; ?>
+        <?php
+         $productid="_brand_color_value_key";
+        echo get_post_meta($post->ID,$productid , true);
+        echo '<span class="titlewrapper"><h4>' . get_the_title() . '</h4></span>'; ?>
+<?php
+           if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'hairneedmini-image', NULL,  'hairneedmini-featured-thumbnail'); endif; ?>
      </div>
     </div>
     </a>

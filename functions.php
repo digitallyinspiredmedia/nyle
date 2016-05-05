@@ -482,7 +482,6 @@ function annointed_admin_bar_remove() {
         /* Remove their stuff */
         $wp_admin_bar->remove_menu('wp-logo');
 }
-
 add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
 
 // Multiple Post Thumbnails / Featured Images
@@ -494,10 +493,7 @@ new MultiPostThumbnails(array(
 'post_type' => 'hairneeds'
  ) );
 
- }
-
 // Multiple Post Thumbnails / Featured Images
-if (class_exists('MultiPostThumbnails')) {
 
 new MultiPostThumbnails(array(
 'label' => 'Product Ingredient Image',
@@ -505,7 +501,16 @@ new MultiPostThumbnails(array(
 'post_type' => 'hairneeds'
  ) );
 
+// Multiple Post Thumbnails / Featured Images
+
+new MultiPostThumbnails(array(
+'label' => 'Hair Need mini Image',
+'id' => 'hairneedmini-image',
+'post_type' => 'hairneeds'
+ ) );
+
  }
+
 add_filter('mpt_unprotect_meta', '__return_true');
 
 /**

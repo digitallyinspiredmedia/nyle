@@ -113,7 +113,7 @@ add_action( 'save_post', 'related_prodcut_save_meta_box_data' );
 function brand_color_add_meta_box() {
 
 //	$screens = array( 'post', 'page' ); remove page
-	$screens = array( 'product' );
+	$screens = array( 'product','hairneeds' );
 
 	foreach ( $screens as $screen ) {
 
