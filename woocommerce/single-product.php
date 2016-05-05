@@ -32,9 +32,9 @@ get_header( 'shop' ); ?>
 	?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
-
+<div class="innerproductcover">
 			<?php wc_get_template_part( 'content', 'single-product' ); ?>
-
+</div>
 		<?php endwhile; // end of the loop. ?>
 
 	<?php

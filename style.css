@@ -489,11 +489,7 @@ del {
 	opacity: 0.8;
 }
 
-table,
-th,
-td {
-	border: 1px solid #d1d1d1;
-}
+
 
 table {
 	border-collapse: separate;
@@ -730,6 +726,7 @@ footer.site-footer{
   margin-left: auto;
   margin-right: auto;
     margin-top: 102px;
+    overflow: hidden;
 
 }
 .footersite-info{
@@ -799,4 +796,64 @@ ul.products .button.product_type_grouped:hover{
 .product-prodcuttitleb{
 position: absolute;
     top: 167px;
+}
+
+/* Prodcut inner page */
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images{
+    width: auto;
+    border: 2px solid #ebebeb;
+    padding: 20px 154px;
+}
+.summary.entry-summary h1{
+    font: 700 42px/46px 'Lato', sans-serif;
+    color: #323232;
+/*    margin-bottom: 9px;*/
+}
+.summary.entry-summary .shortdescription{
+    font: 400 17px/21px 'Lato', sans-serif;
+        color: #7e7e7e;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 16px;
+    margin-bottom: 18px;
+}
+.longdescription p{
+font: 400 15px/23px 'Lato', sans-serif;
+    margin-bottom: 30px;
+    color: #323232;
+}
+.woocommerce div.product{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.innerproductcover{
+    margin-top: 36px;
+}
+.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary{
+    margin-top: 23px;
+    margin-right: 100px;
+}
+html{
+    margin:0;
+   padding:0;
+   height:100%;
+}
+body{
+   min-height:100%;
+   position:relative;
+
+}
+#page{
+   margin:0;
+   padding:0;
+   height:100%;
+   min-height:100%;
+   position:relative;
+     padding-bottom:calc(85px + 102px);   /* Height of the footer */
+}
+footer{
+     position:absolute;
+   bottom:0;
+   width:100%;
+    height: 85px;
+
 }
