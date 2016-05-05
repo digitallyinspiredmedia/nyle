@@ -22,7 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post, $woocommerce, $product;
 
 ?>
-<div class="images">
+
+<div class="images thumb-image">
+
+
 	<?php
 		if ( has_post_thumbnail() ) {
 			$image_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
@@ -32,12 +35,12 @@ global $post, $woocommerce, $product;
 			$attachment_count = count( $product->get_gallery_attachment_ids() );
 
 			if ( $attachment_count > 0 ) {
-				$gallery = '[product-gallery]';
+				$gallery = '';
 			} else {
 				$gallery = '';
 			}
 
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto' . $gallery . '">%s</a>', $image_link, $image_caption, $image ), $post->ID );
+			echo '<img src="'.apply_filters( 'woocommerce_single_product_image_html',sprintf( $image_link, $image_caption, $image ), $post->ID ).'" data-imagezoom="true" data-zoomviewsize="[300,300]" data-opacity="0.9" data-cursor="none" data-cursorcolor="52,152,219">';
 
 		} else {
 

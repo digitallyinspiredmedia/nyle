@@ -938,3 +938,8 @@ left: 0px;
 .ingredient-list:nth-child(13) .ingredientcontent-cover{
     float: right;
 }
+
+
+.thumb-image { width: 500px; }
+
+.thumb-image > img { width: 100%; }

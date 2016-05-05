@@ -94,7 +94,8 @@ function base_scripts() {
 	//jquery
 		wp_enqueue_script( 'base-jquery', get_template_directory_uri() . '/js/jquery2.js', true );
 
-	//matchHeight
+
+		wp_enqueue_script( 'jquery-zoom', get_template_directory_uri() . '/js/imagezoom.js', true );
 		wp_enqueue_script( 'matchHeight', get_template_directory_uri() . '/js/jquery.matchHeight-min.js', true );
 
 	//less
