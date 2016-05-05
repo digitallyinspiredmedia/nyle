@@ -82,10 +82,7 @@ add_filter('the_content', 'display_featured_image');*/
  * Enqueue scripts and styles.
  */
 function base_scripts() {
-	// font-family: 'Lora', serif;
- // font-family: 'Nunito', sans-serif;
-		// wp_enqueue_style( 'font-lora', '//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' );
-		// wp_enqueue_style( 'font-nunito', '//fonts.googleapis.com/css?family=Nunito:400,700,300' );
+		wp_enqueue_style( 'font-lato', '//fonts.googleapis.com/css?family=Lato:300,400,700' );
 
 	//base css
 		wp_enqueue_style( 'base-style', get_stylesheet_uri() );
