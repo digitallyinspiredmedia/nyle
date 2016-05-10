@@ -23,14 +23,13 @@ global $post, $woocommerce, $product;
 
 ?>
 
-<div class="images thumb-image">
+<div class="images">
 
 
 	<?php
 		if ( has_post_thumbnail() ) {
-			$image_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
 			$image_link    = wp_get_attachment_url( get_post_thumbnail_id() );
-			$image         = get_the_post_thumbnail( $post->ID, 'full' );
+			$image         = get_the_post_thumbnail( $post->ID );
 
 			$attachment_count = count( $product->get_gallery_attachment_ids() );
 
@@ -40,12 +39,10 @@ global $post, $woocommerce, $product;
 				$gallery = '';
 			}
 
-			echo '<img src="'.apply_filters( 'woocommerce_single_product_image_html',sprintf( $image_link, $image_caption, $image ), $post->ID ).'" data-imagezoom="true" data-zoomviewsize="[300,300]" data-opacity="0.9" data-cursor="none" data-cursorcolor="52,152,219">';
+			echo get_the_post_thumbnail( $post->ID, 'medium' );
 
 		} else {
-
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
-
+			echo '<img src="'.apply_filters( 'woocommerce_single_product_image_html',sprintf( $image_link, $image ) ).'">';
 		}
 	?>
 

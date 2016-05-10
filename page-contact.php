@@ -10,26 +10,19 @@ get_header(); ?>
 
 <div id="content" class="col-full">
 <div id="main" class="col-left">
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-  		<h1 class="page-title"><?php the_title(); ?></h1>
+    <div class="pagebanner" style="background-image: url('<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?> ');" ></div>
+        <div class="contactuspage">
+    <h1 class="page-title"><?php the_title(); ?></h1>
     <?php the_content(); ?>
+            </div>
 <?php
  endwhile;
  endif;
 ?>
+
+    </div>
+</div>
 <?php get_footer(); ?>
 
-    <form class="awesome-form">
-  
-  <div class="input-group">
-    <input type="text">
-    <label>Your Full Name</label>
-  </div>
-  
-  <div class="input-group">
-    <input type="email">
-    <label>Your Email Address</label>
-  </div>
-  
-  <input type="submit">
-</form>

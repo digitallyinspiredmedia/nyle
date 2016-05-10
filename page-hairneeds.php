@@ -11,7 +11,8 @@ get_header(); ?>
 <div id="content" class="col-full">
 <div id="main" class="col-left">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-  		<h1 class="page-title"><?php the_title(); ?></h1>
+   <div class="pagebanner" style="background-image: url('<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?> ');" ></div>
+    <h1 class="page-title"><?php the_title(); ?></h1>
 <?php
  endwhile;
  endif;

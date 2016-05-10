@@ -9,15 +9,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<div class="banner">
+<div class="hairneedbanner">
     <?php
 		// Post thumbnail.
 		the_post_thumbnail( 'category-thumb', array('class' => 'img-responsive') );
 	?>
+    <h1 class="page-title"><?php the_title(); ?></h1>
 </div>
 	<div class="entry-content" id="content-bgimage" style="background-image: url('<?php if (class_exists('MultiPostThumbnails')) : echo MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), 'productingredient-image',NULL, 'full'); endif; ?> ') !important ; ">
   <div class="productimage-relate">
-        <?php if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'product-image', NULL,  'product-featured-thumbnail'); endif; ?>
+        <?php if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'product-image', NULL,  'medium'); endif; ?>
 </div>
     <div class="hairneed-content">
 		<?php the_content();

@@ -77,19 +77,4 @@ function hair_needstype() {
 }
 add_action( 'init', 'nyle_hair', 0 );
 
-//short  code
-function productdesc( $atts, $content = null ) {
-   return '<div class="hairarticle-des">'.do_shortcode($content).'</div>';
-}
-add_shortcode('productdesc', 'productdesc');
-
-function productimage( $atts, $content = null ) {
-   return '<div class="hairarticle-image">'.do_shortcode($content).'</div>';
-}
-add_shortcode('productimage', 'productimage');
-
-function producttitle( $atts, $content = null ) {
-   return '<p class="hairarticle-producttitle">'.do_shortcode($content).'</p>';
-}
-add_shortcode('producttitle', 'producttitle');
  ?>

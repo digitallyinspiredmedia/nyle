@@ -1,19 +1,32 @@
-jQuery(function(){
+jQuery(function() {
+ /* $('[class^="btn-"')
+    .on('mouseenter', function(e) {
+    	$(this).removeClass('hovered');
+    })
+    .on('mouseout', function(e) {
+    	$(this).addClass('hovered');
+    });*/
 
-  jQuery('.wpcf7-form .input-group input').focusout(function(){
+  jQuery('.btn-6')
+    .on('mouseenter', function(e) {
+			var parentOffset = $(this).offset(),
+      		relX = e.pageX - parentOffset.left,
+      		relY = e.pageY - parentOffset.top;
+			$(this).find('span').css({top:relY, left:relX})
+    })
+    .on('mouseout', function(e) {
+			var parentOffset = $(this).offset(),
+      		relX = e.pageX - parentOffset.left,
+      		relY = e.pageY - parentOffset.top;
+    	$(this).find('span').css({top:relY, left:relX})
+    });
+  jQuery('[href=#]').click(function(){return false});
+});
 
-    var text_val = $(this).val();
 
-    if(text_val === "") {
 
-      jQuery(this).removeClass('has-value');
 
-    } else {
-
-      jQuery(this).addClass('has-value');
-
-    }
-
-  });
-
+jQuery(document).ready(function(){
+  $('a.btn').append('<span></span>');
+  $('a.button').append('<span></span>');
 });

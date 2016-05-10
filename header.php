@@ -83,4 +83,4 @@
 <!-- header over -->
 
 <!-- .site-header-main -->
-	<div id="content" class="site-content">
+	<div class="site-content">

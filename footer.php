@@ -36,6 +36,76 @@
   </div>
     </div>
 </footer>
+
+<script>
+jQuery('p:empty').remove();
+jQuery(document).ready(function(){
+  $('form').addClass("awesome-form");
+});
+
+jQuery(function(){
+
+  jQuery('.awesome-form .input-group input').focusout(function(){
+
+    var text_val = $(this).val();
+
+    if(text_val === "") {
+
+      jQuery(this).removeClass('has-value');
+
+    } else {
+
+      jQuery(this).addClass('has-value');
+
+    }
+
+  });
+
+});
+
+
+
+jQuery('.wpcf7-form-control').attr('autocomplete','off');
+
+var cf7input = $( ".wpcf7-form-control" );
+  if ( cf7input.parent().is( "span" ) ) {
+    cf7input.unwrap();
+  } else {
+    cf7input.wrap( "<div></div>" );
+  }
+jQuery('.form-group br').remove();
+
+jQuery('.form-control').focusout(function(){
+ var text_value=jQuery(this).val();
+     if(text_value!='')
+       {
+jQuery(this).addClass("active");
+        }else{jQuery(this).removeClass("active");}
+});
+
+(function($){
+  function floatLabel(inputType){
+    $(inputType).each(function(){
+      var $this = $(this);
+      // on focus add cladd active to label
+      $this.focus(function(){
+        $this.next().addClass("active");
+      });
+      //on blur check field and remove class if needed
+      $this.blur(function(){
+        if($this.val() === '' || $this.val() === 'blank'){
+          $this.next().removeClass();
+        }
+      });
+    });
+  }
+  // just add a class of "floatLabel to the input field!"
+  floatLabel(".floatLabel");
+})(jQuery);
+
+</script>
+
+
 <!-- Footer -->
 <?php wp_footer(); ?>
 </body>

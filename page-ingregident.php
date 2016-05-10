@@ -40,7 +40,7 @@ if($thumb_src != '') :
 
 <?php
         echo '<span class="colorbar" style="background-color:'.$thumb_src.'"></span>';
-        echo '<a href="' . get_term_link($pterm->name, $taxonomyName) . '"><div class="ingredientcontent-cover"><h2 class="ingredient-name">' . $pterm->name . '</h2>';
+        echo '<div class="ingredientcontent-cover"><h2 class="ingredient-name">' . $pterm->name . '</h2>';
          echo '<p>'. $pterm->description . '</p>';
 echo '</div>';
 
@@ -48,7 +48,7 @@ endif;
 
 
 
-echo '  </div></a></li>';
+echo '  </div></li>';
 
         }
         
