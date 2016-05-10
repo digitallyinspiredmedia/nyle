@@ -77,4 +77,62 @@ function hair_needstype() {
 }
 add_action( 'init', 'nyle_hair', 0 );
 
+
+//slider
+// Register Custom Post Type
+function nyle_slider() {
+
+	$labels = array(
+		'name'                  => _x( 'Sliders', 'Post Type General Name', 'nyle' ),
+		'singular_name'         => _x( 'Slider', 'Post Type Singular Name', 'nyle' ),
+		'menu_name'             => __( 'Slider', 'nyle' ),
+		'name_admin_bar'        => __( 'Slider', 'nyle' ),
+		'archives'              => __( 'Slider Archives', 'nyle' ),
+		'parent_item_colon'     => __( 'Parent Slider:', 'nyle' ),
+		'all_items'             => __( 'All Sliders', 'nyle' ),
+		'add_new_item'          => __( 'Add New Slider', 'nyle' ),
+		'add_new'               => __( 'Add New Slider', 'nyle' ),
+		'new_item'              => __( 'New Hair Slider', 'nyle' ),
+		'edit_item'             => __( 'Edit Hair Slider', 'nyle' ),
+		'update_item'           => __( 'Update Slider', 'nyle' ),
+		'view_item'             => __( 'View Slider', 'nyle' ),
+		'search_items'          => __( 'Search Slider', 'nyle' ),
+		'not_found'             => __( 'Not found', 'nyle' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'nyle' ),
+		'featured_image'        => __( 'Featured Image', 'nyle' ),
+		'set_featured_image'    => __( 'Set featured image', 'nyle' ),
+		'remove_featured_image' => __( 'Remove featured image', 'nyle' ),
+		'use_featured_image'    => __( 'Use as featured image', 'nyle' ),
+		'insert_into_item'      => __( 'Insert into Slider', 'nyle' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Slider', 'nyle' ),
+		'items_list'            => __( 'Slider list', 'nyle' ),
+		'items_list_navigation' => __( 'Slider list navigation', 'nyle' ),
+		'filter_items_list'     => __( 'Filter Slider list', 'nyle' ),
+	);
+	$args = array(
+		'label'                 => __( 'Slider', 'nyle' ),
+		'description'           => __( 'Home page slider', 'nyle' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'thumbnail', ),
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-images-alt',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => true,
+		'publicly_queryable'    => false,
+		'rewrite'               => false,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'home_slider', $args );
+
+}
+add_action( 'init', 'nyle_slider', 0 );
+
+
  ?>
