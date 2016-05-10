@@ -1270,6 +1270,7 @@ address strong > b{
     background-position: 0px 0px;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 /* special */
@@ -1280,7 +1281,9 @@ address strong > b{
     margin-bottom: 0px;
 }
 @media all and (min-width: 1400px) {
-    .site-content{
+    .site-content .hairneeds-wrapper,
+    .site-content .contactuspage,
+    .woocommerce-page .site-content{
         width: 1400px;
         margin: 0 auto;
     }
