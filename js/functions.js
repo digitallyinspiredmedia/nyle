@@ -23,11 +23,9 @@ jQuery(function() {
   $('[href=#]').click(function(){return false});
 });
 
-
-
-
 jQuery(document).ready(function(){
   $('.button.product_type_grouped').append('<span></span>');
   $('.wpcf7-submit').append('<span></span>');
   //$('a.buybtn').append('<span></span>');
 });
+

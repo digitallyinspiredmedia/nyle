@@ -37,17 +37,10 @@ global $post, $woocommerce, $product;
 			} else {
 				$gallery = '';
 			}
-?>
 
-<div class="easyzoom easyzoom--overlay">
-				<a href="<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?>">
-					 <?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
-				</a>
-			</div>
+    echo '<img  src="'.get_the_post_thumbnail_url( $post->ID, 'medium').'" data-zoom-image="'.get_the_post_thumbnail_url( $post->ID, 'full').'" id="zoom01" />' ;
 
 
-
-<?php
 		} else {
 			echo '<img src="'.apply_filters( 'woocommerce_single_product_image_html',sprintf( $image_link, $image ) ).'">';
 		}

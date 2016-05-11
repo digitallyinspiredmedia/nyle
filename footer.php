@@ -38,6 +38,14 @@
 </footer>
 
 <script>
+  jQuery('#zoom01').elevateZoom({
+    zoomType: "inner",
+cursor: "crosshair",
+zoomWindowFadeIn: 1000,
+zoomWindowFadeOut: 750
+   });
+
+
 jQuery('p:empty').remove();
 jQuery(document).ready(function(){
   $('form').addClass("awesome-form");
