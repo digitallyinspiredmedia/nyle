@@ -29,9 +29,10 @@ $var = do_shortcode( '[product_url id="'. get_post_meta($post->ID,$productid , t
 
         ?>
         </div>
-
-
 	</div><!-- .entry-content -->
+    <div class="harineedform">
+    <?php echo do_shortcode('[contact-form-7 id="281" title="Hair Needs Form"]'); ?>
+    </div>
 
 	
 

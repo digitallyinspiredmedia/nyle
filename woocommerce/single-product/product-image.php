@@ -25,7 +25,6 @@ global $post, $woocommerce, $product;
 
 <div class="images">
 
-
 	<?php
 		if ( has_post_thumbnail() ) {
 			$image_link    = wp_get_attachment_url( get_post_thumbnail_id() );
@@ -38,9 +37,17 @@ global $post, $woocommerce, $product;
 			} else {
 				$gallery = '';
 			}
+?>
 
-			echo get_the_post_thumbnail( $post->ID, 'medium' );
+<div class="easyzoom easyzoom--overlay">
+				<a href="<?php echo get_the_post_thumbnail_url($post_id, 'full'); ?>">
+					 <?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
+				</a>
+			</div>
 
+
+
+<?php
 		} else {
 			echo '<img src="'.apply_filters( 'woocommerce_single_product_image_html',sprintf( $image_link, $image ) ).'">';
 		}

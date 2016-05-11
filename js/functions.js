@@ -7,7 +7,7 @@ jQuery(function() {
     	$(this).addClass('hovered');
     });*/
 
-  jQuery('.btn-6')
+  $('.btn-6')
     .on('mouseenter', function(e) {
 			var parentOffset = $(this).offset(),
       		relX = e.pageX - parentOffset.left,
@@ -20,13 +20,14 @@ jQuery(function() {
       		relY = e.pageY - parentOffset.top;
     	$(this).find('span').css({top:relY, left:relX})
     });
-  jQuery('[href=#]').click(function(){return false});
+  $('[href=#]').click(function(){return false});
 });
 
 
 
 
 jQuery(document).ready(function(){
-  $('a.btn').append('<span></span>');
-  $('a.button').append('<span></span>');
+  $('.button.product_type_grouped').append('<span></span>');
+  $('.wpcf7-submit').append('<span></span>');
+  //$('a.buybtn').append('<span></span>');
 });

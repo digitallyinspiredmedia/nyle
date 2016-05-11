@@ -88,6 +88,8 @@ function base_scripts() {
 		wp_enqueue_style( 'base-style', get_stylesheet_uri() );
     //slider css
         wp_enqueue_style( 'base-slider', get_template_directory_uri() . '/css/slider.css' );
+     //easyzoom css
+        wp_enqueue_style( 'base-easyzoom', get_template_directory_uri() . '/css/easyzoom.css' );
 
 	// Load the html5 shiv.
 		wp_enqueue_script( 'base-html5', get_template_directory_uri() . '/js/html5.js');
@@ -97,8 +99,8 @@ function base_scripts() {
 		wp_enqueue_script( 'base-jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js', true );
     // slider js
 		wp_enqueue_script( 'bootstrap-slider', get_template_directory_uri() . '/js/slider.js', true );
-
-		wp_enqueue_script( 'matchHeight', get_template_directory_uri() . '/js/jquery.matchHeight-min.js', true );
+    // anythingzoomer
+		wp_enqueue_script( 'anythingzoomer', get_template_directory_uri() . '/js/easyzoom.js', true );
 
 	//functions
 		wp_enqueue_script( 'base-functions', get_template_directory_uri() . '/js/functions.js', true );
@@ -817,7 +819,7 @@ function rohils_product_url_function($atts){
         }
 
         $_product = wc_get_product( $product_data );
-echo '<a class="viewmore btn" href="' .esc_url( get_post_permalink($_product->id) ).'"> View more </a> ';
+echo '<a class="btn-6" href="' .esc_url( get_post_permalink($_product->id) ).'"> View more <span> </span> </a> ';
 }
 
 add_filter( 'add_to_cart_text', 'woo_custom_product_add_to_cart_text' );            // < 2.1

@@ -44,23 +44,14 @@ jQuery(document).ready(function(){
 });
 
 jQuery(function(){
-
   jQuery('.awesome-form .input-group input').focusout(function(){
-
     var text_val = $(this).val();
-
     if(text_val === "") {
-
       jQuery(this).removeClass('has-value');
-
     } else {
-
       jQuery(this).addClass('has-value');
-
     }
-
   });
-
 });
 
 
@@ -102,6 +93,11 @@ jQuery(this).addClass("active");
   // just add a class of "floatLabel to the input field!"
   floatLabel(".floatLabel");
 })(jQuery);
+
+
+
+
+
 
 </script>
 

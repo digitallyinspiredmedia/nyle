@@ -2,7 +2,7 @@
 
 //short  code
 function productlink( $atts, $content = null ) {
-   return '<div class="product-buy"><a class="buybtn" target="_blank" href="'.do_shortcode($content).'"> Buy Now </a></div>';
+   return '<div class="product-buy"><a class="btn-6" target="_blank" href="'.do_shortcode($content).'"> Buy Now <span> </span> </a></div>';
 }
 add_shortcode('productlink', 'productlink');
 
