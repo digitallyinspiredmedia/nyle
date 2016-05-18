@@ -29,3 +29,13 @@ jQuery(document).ready(function(){
   //$('a.buybtn').append('<span></span>');
 });
 
+jQuery(document).ready(function(){
+
+	$nav_list = $('#nav-toggle');
+	$nav_list.click(function() {
+		$('#nav-toggle').toggleClass('active');
+    $('.pushmenu-left').toggleClass('pushmenu-active');
+		$('.pushmenu-push').toggleClass('menu-body');
+	});
+
+	});
