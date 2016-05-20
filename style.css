@@ -686,7 +686,7 @@ div.wpcf7-response-output{
 div.wpcf7 {
 	margin: 0 0 0 10%;
     padding: 5px 0 0;
-    width: 60%;
+    width: 59%;
     float: left;
     position: relative;
     overflow: hidden;
@@ -1280,10 +1280,7 @@ address{
 address strong > b{
     font: 700 16px/27px 'Lato', sans-serif;
 }
-.contactuspage{
-   margin: 0 15%;
-    overflow: hidden;
-}
+
 .pagebanner{
      min-height: 233px;
     background-size: cover;
@@ -1300,6 +1297,40 @@ address strong > b{
 .woocommerce div.product div.images, .woocommerce div.product div.summary{
     margin-bottom: 0px;
 }
+@media (min-width: 768px) {
+  .contactuspage {
+      margin: 0 15px;
+    width: 750px;
+      margin: 0 auto;
+  }
+   div.wpcf7 {
+    margin: 0 0 0 5%;
+    padding: 5px 0 0;
+    width: 57%;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+}
+@media (min-width: 992px) {
+  .contactuspage {
+    margin: 0 10%;
+    width: calc(970px - 0%);
+      margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .contactuspage {
+      margin: 0 15%;
+     width: calc(1170px - 15%);
+      margin: 0 auto;
+  }
+    div.wpcf7 {
+         margin: 0 0 0 10%;
+    width: 59%;
+    }
+}
 @media all and (min-width: 1400px) {
     .site-content .hairneeds-wrapper,
     .site-content .contactuspage,
@@ -1311,12 +1342,6 @@ address strong > b{
 
 }
 
-@media all and (max-width: 1024px) {
-    #content{
-        width: 100%;
-    }
-
-}
 
 
 @media all and (max-width: 700px) {
@@ -1388,7 +1413,6 @@ address strong > b{
 	  -moz-transition: all 0.3s ease;
 	  transition: all 0.3s ease;
 	}
-.pushmenu-push.menu-body{
 
-}
+
 }

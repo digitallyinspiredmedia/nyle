@@ -134,5 +134,23 @@ function nyle_slider() {
 }
 add_action( 'init', 'nyle_slider', 0 );
 
+// Register Custom Taxonomy
+function nyle_producttype() {
+//test
+add_action( 'init', 'hair_producttype' );
+function hair_producttype() {
+register_taxonomy(
+'type',
+'product',
+array(
+	'label'                 => __( 'Type', 'nyle' ),
+	'hierarchical' => true,
+)
+);
+}
+}
+add_action( 'init', 'nyle_producttype', 0 );
+
+
 
  ?>
