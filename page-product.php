@@ -11,13 +11,13 @@ get_header(); ?>
 <div id="content" class="col-full">
 <div id="main" class="col-left">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-  		<h1 class="page-title"><?php the_title(); ?></h1>
+  		<h1 class="page-title productpa"><?php the_title(); ?></h1>
 <?php
  endwhile;
  endif;
 ?>
 <div class="hairneeds-wrapper">
-
+<p class="sectiontitle"> Shampoo </p>
 <ul class="products">
 	<?php
   $args = array (
@@ -43,8 +43,8 @@ get_header(); ?>
 </ul><!--/.products-->
 
 </div> <!-- hair need wrapper - shampoo -->
-<div class="hairneeds-wrapper">
-
+<div class="hairneeds-wrapper conditionerlist">
+<p class="sectiontitle"> Conditioner</p>
 <ul class="products">
 	<?php
   $args = array (
