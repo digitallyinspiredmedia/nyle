@@ -822,14 +822,14 @@ function rohils_product_url_function($atts){
 echo '<a class="btn-6" href="' .esc_url( get_post_permalink($_product->id) ).'"> View more <span> </span> </a> ';
 }
 
-add_filter( 'add_to_cart_text', 'woo_custom_product_add_to_cart_text' );            // < 2.1
-add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_product_add_to_cart_text' );  // 2.1 +
-
-function woo_custom_product_add_to_cart_text() {
-
-    return __( 'Know More', 'woocommerce' );
-
-}
+// add_filter( 'add_to_cart_text', 'woo_custom_product_add_to_cart_text' );            // < 2.1
+// add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_product_add_to_cart_text' );  // 2.1 +
+//
+// function woo_custom_product_add_to_cart_text() {
+//
+//     return __( 'Know More', 'woocommerce' );
+//
+// }
 
 
 
