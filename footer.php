@@ -38,12 +38,12 @@
 </footer>
 
 <script>
-  jQuery('#zoom01').elevateZoom({
-    zoomType: "inner",
-cursor: "crosshair",
-zoomWindowFadeIn: 1000,
-zoomWindowFadeOut: 750
-   });
+//   jQuery('#zoom01').elevateZoom({
+//     zoomType: "inner",
+// cursor: "crosshair",
+// zoomWindowFadeIn: 1000,
+// zoomWindowFadeOut: 750
+//    });
 
 
 jQuery('p:empty').remove();
@@ -101,10 +101,6 @@ jQuery(this).addClass("active");
   // just add a class of "floatLabel to the input field!"
   floatLabel(".floatLabel");
 })(jQuery);
-
-
-
-
 
 
 </script>

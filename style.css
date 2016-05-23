@@ -693,6 +693,7 @@ div.wpcf7 {
     width: 60%;
     margin: 0 auto;
 }
+
 select{
     border: solid 1px #acacac;
     padding: 15px 5px 15px;
@@ -851,18 +852,6 @@ input[type="submit"]:hover{
      color: #00853e;
  }
 
-  /* nav icon */
-  /**
- * From: http://joren.co/sass-burger/
- * Burger parts
- *
- * (---) top    -> &:before
- * [---] middle -> &
- * (---) bottom -> &:after
- */
-/**
- * Burger
- */
  #nav-toggle {
   position: absolute;
   top: 30px;
@@ -1023,9 +1012,6 @@ top: 7px;
 
 }
 
-
-
-
 .hairneedbanner{
     text-align: center;
     margin-bottom: 30px;
@@ -1072,35 +1058,86 @@ h1.page-title{
     float: left;
     text-align: center;
 }
-.hairneed-content{
+/*.hairneed-content{
     width: calc(100% - 440px - 70px - 60px);
     float: left;
     margin-right: 60px;
-}
+}*/
 .hairneed-content p{
     font: 400 15px/22px 'Lato', sans-serif;
     color: #313131;
     margin-bottom: 22px;
 }
-
-
+/* Hair needs inner page */
+@media (min-width: 210px){
+ .hairneedbanner .page-title{ display: none; }
+ #content-bgimage{
+  margin: 0 20px;
+  width: calc(100% - 40px);
+  background-blend-mode: overlay;
+background-color: #fff;
+ }
+ .productimage-relate{
+  width: 100%;
+  margin: 0 auto 22px;
+ }
+ .hairneed-content{
+  width: 100%;
+  margin: 0 auto;
+ }
+}
+@media (min-width: 420px){
+ .productimage-relate{
+  width: 35%;
+  margin-right: 22px;
+ }
+ .hairneed-content{
+  width: calc(100% - 35% - 22px);
+  overflow: hidden;
+ }
+}
+@media (min-width: 720px){
+ .hairneedbanner .page-title{ display: block; }
+  #content-bgimage{
+   background-blend-mode: unset;
+  }
+}
+@media (min-width: 1200px){
+  #content-bgimage{
+   margin: 0px 38px;
+   width: auto;
+  }
+  .productimage-relate {
+    width: 440px;
+    margin-right: 70px;
+   }
+   .hairneed-content {
+    width: calc(100% - 440px - 70px - 60px);
+    float: left;
+    margin-right: 60px;
+   }
+}
+/* Hair needs outer page */
+@media (min-width: 210px){
 ul.hairneedcover{
     margin: 0;
-/*    text-align: center;*/
     position: relative;
 }
 li.hairneedlist{
     margin-bottom: 30px;
     margin-right: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
     width: 225px;
     width: calc(100% / 12 * 2.6 - 60px);
+    width: calc(100% - 40px);
     text-align: center;
     border-radius: 3px;
 
 }
-li.hairneedlist:first-child{
+/*li.hairneedlist:first-child{
     margin-left: 30px;
-}
+}*/
 li.hairneedlist:last-child{
     margin-right: 0px;
 }
@@ -1124,6 +1161,84 @@ vertical-align: middle;
     position: relative;
 display: table;
     font: 700 27px/normal 'Lato', sans-serif;
+    width: 100%;
+    height: 232px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+.imagebox {
+    width: 225px;
+    width: 100%;
+    height: auto;
+}
+.imagebox > img{
+ width: 100%; height: auto;
+}
+li.hairneedlist:nth-child(4) .titlebox{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+/*li.hairneedlist:nth-child(2) .titlebox,
+li.hairneedlist:nth-child(4) .titlebox{
+    position: initial;
+    top: initial;
+}
+li.hairneedlist:nth-child(2) .imagebox,
+li.hairneedlist:nth-child(4) .imagebox{
+     position: initial;
+    top: 0px;
+}*/
+.harineedform div.wpcf7{
+    margin: 30px auto 0;
+    margin: 30px 20px 0;
+    width: 100%;
+    width: calc(100% - 40px);
+}
+.harineedform form.wpcf7-form.awesome-form{
+    width: 100%;
+    margin: 0 auto;
+}
+
+}
+@media (min-width: 420px){
+ li.hairneedlist{
+     width: calc(100% / 12  *  6 - 40px);
+     float: left;
+ }
+}
+@media (min-width: 720px){
+ li.hairneedlist{
+     width: calc(100% / 12  *  4 - 40px);
+ }
+}
+@media (min-width: 1020px){
+ li.hairneedlist{
+     width: calc(100% / 12  *  3 - 40px);
+ }
+ .harineedform {
+    margin: 0 auto;
+    width: 60%;
+}
+
+}
+@media all and ( min-width: 1200px) {
+ li.hairneedlist:first-child {
+    margin-left: 30px;
+}
+li.hairneedlist {
+ margin-bottom: 30px;
+margin-right: 30px;
+margin-left: 0px;
+width: 225px;
+width: calc(100% / 12 * 2.6 - 60px);
+text-align: center;
+border-radius: 3px;
+}
+.titlebox {
+    position: relative;
+    display: table;
+    font: 700 27px/normal 'Lato', sans-serif;
     width: 225px;
     height: 232px;
     text-align: center;
@@ -1133,20 +1248,25 @@ display: table;
 .imagebox {
     width: 225px;
 }
-li.hairneedlist:nth-child(4) .titlebox{
-    padding-left: 30px;
-    padding-right: 30px;
+li.hairneedlist:last-child {
+    margin-right: 0px;
 }
 li.hairneedlist:nth-child(2) .titlebox,
-li.hairneedlist:nth-child(4) .titlebox{
-    position: absolute;
-    top: 233px;
+li.hairneedlist:nth-child(4) .titlebox {
+   position: absolute;
+   top: 233px;
 }
 li.hairneedlist:nth-child(2) .imagebox,
-li.hairneedlist:nth-child(4) .imagebox{
-     position: absolute;
-    top: 1px;
+li.hairneedlist:nth-child(4) .imagebox {
+   position: absolute;
+   top: 1px;
 }
+
+
+}
+
+
+
 footer.site-footer{
     background: #f7f7f7;
     padding: 20px 0px 20px;

@@ -16,7 +16,7 @@
 	?>
     <h1 class="page-title"><?php the_title(); ?></h1>
 </div>
-	<div class="entry-content" id="content-bgimage" style="background-image: url('<?php if (class_exists('MultiPostThumbnails')) : echo MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), 'productingredient-image',NULL, 'full'); endif; ?> ') !important ; ">
+	<div class="entry-content" id="content-bgimage" style="background-image: url('<?php if (class_exists('MultiPostThumbnails')) : echo MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), 'productingredient-image',NULL, 'full'); endif; ?> ')  ; ">
   <div class="productimage-relate">
         <?php if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'product-image', NULL,  'medium'); endif; ?>
 </div>
@@ -30,8 +30,8 @@ $var = do_shortcode( '[product_url id="'. get_post_meta($post->ID,$productid , t
         ?>
         </div>
 	</div><!-- .entry-content -->
-   
 
-	
+
+
 
 </article><!-- #post-## -->
