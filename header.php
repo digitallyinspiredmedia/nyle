@@ -62,7 +62,7 @@
    			<div class="main-navigation">
      			<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || has_nav_menu( 'footer' ) ) : ?>
 					<?php if ( has_nav_menu( 'primary' ) ) : ?>
-						<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php _e( 'Primary Menu', 'base' ); ?>">
+						<nav id="site-navigation" role="navigation" aria-label="<?php _e( 'Primary Menu', 'base' ); ?>">
 							<?php
 								wp_nav_menu( array(
 									'theme_location' => 'primary',
@@ -77,7 +77,7 @@
 		 <!-- menu end -->
         </div>
   		<!-- menu icon-->
-  			<a id="nav-toggle" href="#"><span></span></a>
+					<a href="#" class="button" id="nav-toggle"> <span class="burger-icon"></span> </a>
   		<!-- menu icon end -->
 	</header>
 <!-- header over -->
