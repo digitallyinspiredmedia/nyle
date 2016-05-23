@@ -39,3 +39,11 @@ jQuery(document).ready(function(){
 	});
 
 	});
+
+ jQuery(function() {
+    jQuery('ul.products li').matchHeight( {
+    property: 'height',
+    target: null,
+    remove: false});
+
+})

@@ -807,6 +807,7 @@ input[type="submit"]:hover{
  -webkit-box-shadow: 0px 2px 0px 0px rgba(235,235,235,1);
  -moz-box-shadow: 0px 2px 0px 0px rgba(235,235,235,1);
  box-shadow: 0px 2px 0px 0px rgba(235,235,235,1);
+ position: relative;
 }
 .mainnav{
   max-width: 1200px;
@@ -871,9 +872,10 @@ input[type="submit"]:hover{
  * Burger
  */
  #nav-toggle {
-  position: fixed;
+  position: absolute;
   top: 30px;
   right: 20px;
+  z-index: 1001;
  }
  #nav-toggle,
  #nav-toggle span {
@@ -1204,11 +1206,27 @@ h1.productpa{
 }
 ul.products{
  text-align: center;
+ margin: 0px;
 }
+@media (min-width: 220px) {
+ ul.products li{
+  width: calc( 100% - 40px);
+  margin: 0 20px 50px;
+ }
+}
+@media (min-width: 420px) {
+ ul.products li{
+  width: calc( 100% / 12 * 6 - 40px);
+  margin: 0 20px 50px;
+  display: inline-flex;
+ }
+}
+@media (min-width: 720px) {
 ul.products li{
   width: calc(100% / 12 * 3 - 25px);
   margin: 0 25px 50px;
   text-align: center;
+}
 }
 ul.products li > div{
  text-align: center;

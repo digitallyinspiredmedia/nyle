@@ -101,7 +101,8 @@ function base_scripts() {
 		wp_enqueue_script( 'bootstrap-slider', get_template_directory_uri() . '/js/slider.js', true );
     // anythingzoomer
 		wp_enqueue_script( 'jqueryelevatezoom', get_template_directory_uri() . '/js/jquery.elevatezoom.js', true );
-
+		// matchHight js
+wp_enqueue_script( 'grid-mactchHight', get_template_directory_uri() . '/js/jquery.matchHeight-min.js', true );
 	//functions
 		wp_enqueue_script( 'base-functions', get_template_directory_uri() . '/js/functions.js', true );
 
