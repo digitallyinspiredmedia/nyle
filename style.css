@@ -880,6 +880,7 @@ input[type="submit"]:hover{
     padding: 12px 20px;
     border: 0px;
     border-radius: 0px;
+    background: transparent;
 }
 #nav-toggle .burger-icon::before, #nav-toggle .burger-icon::after {
   position: absolute;
@@ -1351,9 +1352,8 @@ font: 400 15px/23px 'Lato', sans-serif;
 }
 .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
     width: auto;
-    border: 2px solid #ebebeb;
-    padding: 20px 60px;
-    border-radius: 3px;
+    padding: 20px 20px;
+    margin-right: 0;
 }
 .woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
     margin-top: 23px;
@@ -1362,10 +1362,19 @@ font: 400 15px/23px 'Lato', sans-serif;
 .woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
     float: right;
     width: 48%;
+    margin: 0;
 }
 
 }
-
+@media (min-width: 1200px) {
+ .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+     padding: 20px 60px;
+ }
+ .woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+      margin-top: 23px;
+    margin-right: 100px;
+ }
+}
 html{
     margin:0;
    padding:0;
