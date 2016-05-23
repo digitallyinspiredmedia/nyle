@@ -1248,6 +1248,7 @@ ul.products li .prodcut-productimage{
 .conditionerlist{
  margin-top: 42px;
 }
+
 /* Prodcut inner page */
 .woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images{
     width: auto;
@@ -1299,8 +1300,71 @@ font: 400 15px/23px 'Lato', sans-serif;
 
 }
 
+/* product inner responsive */
 
+@media (min-width: 210px) {
+.woocommerce div.product{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin: 0 20px;
+}
+/* special */
+.woocommerce div.product form.cart, .woocommerce div.product p.cart{
+    display: none;
+}
+.woocommerce div.product div.images, .woocommerce div.product div.summary{
+    margin-bottom: 0px;
+}
+.woocommerce #content div.product div.images,
+.woocommerce div.product div.images,
+.woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+    width: auto;
+    border: 2px solid #ebebeb;
+    padding: 20px 60px;
+    border-radius: 3px;
+}
 
+}
+
+@media (min-width: 720px) {
+ .woocommerce #content div.product div.images,
+ .woocommerce div.product div.images,
+ .woocommerce-page #content div.product div.images,
+ .woocommerce-page div.product div.images {
+    padding: 20px 20px;
+    margin-right: 30px;
+    width: 320px;
+    float: left;
+    /*display: list-item;*/
+}
+.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary{
+ margin: 0;
+ width: calc(100% - 320px - 30px);
+ float: right;
+}
+
+}
+@media (min-width: 920px) {
+ .woocommerce div.product {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+    width: auto;
+    border: 2px solid #ebebeb;
+    padding: 20px 60px;
+    border-radius: 3px;
+}
+.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+    margin-top: 23px;
+    margin-right: 100px;
+}
+.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+    float: right;
+    width: 48%;
+}
+
+}
 
 html{
     margin:0;
@@ -1329,7 +1393,7 @@ footer{
 }
 
 
-@media (min-width: 320px) {
+@media (min-width: 210px) {
  .ingredient-cover{
   text-align: center;
   margin: 0px;
@@ -1546,13 +1610,7 @@ address strong > b{
 }
 
 
-/* special */
-.woocommerce div.product form.cart, .woocommerce div.product p.cart{
-    display: none;
-}
-.woocommerce div.product div.images, .woocommerce div.product div.summary{
-    margin-bottom: 0px;
-}
+
 @media (min-width: 210px) {
 
  .pagebanner{

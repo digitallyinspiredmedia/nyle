@@ -7,7 +7,7 @@ jQuery(function() {
     	$(this).addClass('hovered');
     });*/
 
-  $('.btn-6')
+  $('.btn-6').$('.button.product_type_grouped').$('.wpcf7-submit')
     .on('mouseenter', function(e) {
 			var parentOffset = $(this).offset(),
       		relX = e.pageX - parentOffset.left,
