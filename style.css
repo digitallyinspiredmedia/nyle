@@ -594,14 +594,6 @@ textarea{
     width: 100%;
     display: block;
 }
-.input-group.inputhalf {
-    width: 50%;
-    display: inline-block;
-}
-.input-group:nth-child(3) {
-    padding-right: 5%;
-}
-
 
 input:focus, input:active, textarea:focus, textarea:active {
   outline: none;
@@ -1208,7 +1200,7 @@ ul.products{
  text-align: center;
  margin: 0px;
 }
-@media (min-width: 220px) {
+@media (min-width: 210px) {
  ul.products li{
   width: calc( 100% - 40px);
   margin: 0 20px 50px;
@@ -1346,8 +1338,6 @@ footer{
     text-align: left;
     position: relative;
     background-repeat: no-repeat;
-    background-attachment: auto;
-
 }
 .ingredient-listwrapper{
   border-top: 2px solid #dfdfdf;
@@ -1439,6 +1429,24 @@ footer{
     float: right;
 }
 
+@media (min-width: 320px) {
+ .ingredient-list span.colorbar{
+  padding: 2px;
+  width: 2px;
+ }
+ .ingredientcontent-cover{
+  width: auto;
+  text-align: left;
+ }
+ .ingredient-name{
+  margin-bottom: 14px;
+ }
+ .ingredient-listwrapper{
+  padding: 15px;
+ }
+}
+
+
 /* zoom */
 .thumb-image { width: 500px; }
 
@@ -1484,14 +1492,6 @@ address strong > b{
     font: 700 16px/27px 'Lato', sans-serif;
 }
 
-.pagebanner{
-     min-height: 233px;
-    background-size: cover;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
-}
 
 /* special */
 .woocommerce div.product form.cart, .woocommerce div.product p.cart{
@@ -1500,22 +1500,62 @@ address strong > b{
 .woocommerce div.product div.images, .woocommerce div.product div.summary{
     margin-bottom: 0px;
 }
-@media (min-width: 768px) {
+@media (min-width: 210px) {
+
+ .pagebanner{
+      /*min-height: 233px;*/
+      min-height: 80px;
+     background-size: cover;
+     background-position: 0 0;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-attachment: initial;
+     background-size: 100%;
+ }
+ .contactuspage {
+     /*margin: 0 15px;*/
+     /*width: 750px;*/
+     width: auto;
+     margin: 0 20px;
+ }
+  div.wpcf7 {
+   margin: 6% 0 0 0%;
+   padding: 5px 0 0;
+   width: 57%;
+   width: auto;
+   float: left;
+   position: relative;
+   overflow: hidden;
+   display: inline-block;
+}
+.input-group.inputhalf{
+ width: 100%;
+ padding: 0px;
+}
+.wpcf7-submit{ margin: 0 auto; }
+}
+@media (min-width: 720px) {
+ .pagebanner{
+      min-height: 233px;
+  }
   .contactuspage {
       margin: 0 15px;
-    width: 750px;
+      width: 750px;
       margin: 0 auto;
   }
-   div.wpcf7 {
+  div.wpcf7 {
     margin: 0 0 0 5%;
-    padding: 5px 0 0;
     width: 57%;
-    float: left;
-    position: relative;
-    overflow: hidden;
+}
+.input-group.inputhalf {
+    width: 50%;
     display: inline-block;
 }
+.input-group:nth-child(3) {
+    padding-right: 5%;
+}
 
+.wpcf7-submit{ margin: 0; }
 }
 @media (min-width: 992px) {
   .contactuspage {
